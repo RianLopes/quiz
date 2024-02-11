@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+*, :root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'inter', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background-color: #0c142f;
+}
+main {
+  max-width: 640px;
+  padding: 20px;
+  margin: 0 auto 64px;
+}
+header {
+  margin-top: 64px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #2b2b2b;
+  overflow: hidden;
+}
+header h1 {
+  font-size: 35px;
+  color: #ffffff;
+  background-color: #e7ae47;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+}
+#quiz {
+  counter-reset: quiz-item ;
+}
+.quiz-item {
+  margin-top: 24px;
+  border: 2px solid #e7ae47;
+  border-radius: 6px;
+}
+.quiz-item h3 {
+  padding: 16px 20px;
+  color: #e8e2f0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #9f9ca221;
+}
+.quiz-item h3:before {
+  counter-increment: quiz-item;
+  content: counter(quiz-item);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e7ae47;
+  border-radius: 50%;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+.quiz-item dl {
+  padding: 20px;
+  display: grid;
+  gap: 8px;
+}
+.quiz-item dl dt {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2e3f0;
+}
+input {
+  all:unset;
+  border: 1px solid #94a3b8;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+input:checked {
+  border: 1px solid #e7ae47;
+}
+input:checked:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-color: #e7ae47;
+  border-radius: 10px;
+  
+}
+#acertos {
+  position: fixed;
+  text-align: center;
+  background-color: #e7ae47;
+  bottom: 10px;
+  left: 33%;
+  width: 34%;
+  height: 50px;
+  padding: 14px;
+  border-radius: 10px;
+  align-items: center;
+  color: #f5f0f9;
+  z-index: 9999;
+}
